@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react'
 import createHistory from 'history/createBrowserHistory'
 import Router from './Router'
 
+export const history = createHistory()
+
 /**
  * The public API for a <Router> that uses HTML5 history.
  */
@@ -17,10 +19,10 @@ class BrowserRouter extends React.Component {
     ])
   }
 
-  history = createHistory(this.props)
+  //history = createHistory(this.props)
 
   render() {
-    return <Router history={this.history} children={this.props.children}/>
+    return <Router history={history} children={this.props.children}/>
   }
 }
 
